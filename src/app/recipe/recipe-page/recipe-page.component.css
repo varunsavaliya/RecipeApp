@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i");
+
+
+.ingredient{
+    width: -webkit-fill-available;;
+}
+
+.ingredient-text{
+    flex: none;
+    max-width: fit-content;
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+.ingredient-details{
+    font-family: "Open Sans", sans-serif;
+}

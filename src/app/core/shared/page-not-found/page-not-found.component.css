@@ -1,0 +1,24 @@
+.home-btn{
+    display: block;
+    text-align: center;
+    width: fit-content;
+    margin: 30px auto !important;
+}
+
+span{
+    display: block;
+    margin: 25px auto;
+    text-align: center;
+    color: #40ba37;
+}
+
+.text-404{
+    font-size: 106px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.text{
+    margin-top: 15px;
+    font-size: 34px;
+}

@@ -1,0 +1,113 @@
+<!-- ##### Breadcumb Area Start ##### -->
+<div *ngIf="recipe" class="breadcumb-area bg-img bg-overlay"
+    style="background-image: url({{recipe.image}});">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12">
+                <div class="breadcumb-text text-center">
+                    <h2>Recipe</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ##### Breadcumb Area End ##### -->
+
+<div class="receipe-post-area section-padding-80">
+
+    <!-- Receipe Content Area -->
+    <div class="receipe-content-area" *ngIf="recipe">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-12 col-md-8">
+                    <div class="receipe-headline my-5">
+                        <span>Calories - {{ recipe.calories | number:'1.0-0' }} Kcal</span>
+                        <h2>{{recipe.label}}</h2>
+                        <div class="receipe-duration">
+                            <h6>Dish Type: {{recipe.dishType[0] | titlecase}}</h6>
+                            <h6>Meal Type: {{recipe.mealType}}</h6>
+                            <h6>Yields: {{recipe.yield}} Servings</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="text-right my-5">
+                        <span class="btn delicious-btn">{{recipe.cuisineType}}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-12 col-lg-8">
+                    <h3 class="mb-4">Ingredients</h3>
+                    <div class="accordions mb-3" id="accordion" role="tablist" aria-multiselectable="true" *ngFor="let ing of recipe.ingredients; let i = index">
+                        <!-- Single Accordian Area -->
+                        <div class="panel single-accordion">
+                            <h6><a role="button" class="collapsed" aria-expanded="true" aria-controls="collapseOne" data-toggle="collapse" data-parent="#accordion" href="#collapse_{{i+1}}">{{i+1}}. {{ing.food | uppercase}}
+                                    <span class="accor-open"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                    <span class="accor-close"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                    </a></h6>
+                            <div id="collapse_{{i+1}}" class="accordion-content collapse">
+                                <p>{{ing.text}}</p>
+                                <p class="d-block">Food - {{ing.food}}</p>
+                                <p class="d-block">Measure - {{ing.measure}}</p>
+                                <p class="d-block">Quantity - {{ing.quantity}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ingredients -->
+                <div class="col-12 col-lg-4">
+                    <div class="ingredients">
+                        <h4>Ingredients</h4>
+                        <!-- Custom Checkbox -->
+                        <div class="custom-control custom-checkbox"
+                            *ngFor="let ing of recipe.ingredientLines; let i = index">
+                            <input type="checkbox" class="custom-control-input" [id]="'customCheck_' + i">
+                            <label class="custom-control-label" [for]="'customCheck_' + i">{{ ing }}</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading text-left">
+                        <h3>Leave a comment</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="contact-form-area">
+                        <form action="#" method="post">
+                            <div class="row">
+                                <div class="col-12 col-lg-6">
+                                    <input type="text" class="form-control" id="name" placeholder="Name">
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <input type="email" class="form-control" id="email" placeholder="E-mail">
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="message" class="form-control" id="message" cols="30" rows="10"
+                                        placeholder="Message"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn delicious-btn mt-30" type="submit">Post Comments</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<!-- ##### Top Catagory Area Start ##### -->
+<section class="top-catagory-area section-padding-80-0 pt-2" *ngIf="recipes.length > 0">
+    <div class="container">
+        <h3 class="heading my-5">Top Categories</h3>
+        <div class="row">
+            <!-- Top Catagory Area -->
+            <div class="col-12 col-lg-6" *ngFor="let recipe of recipes">
+                <div *ngIf="recipe" class="single-top-catagory">
+                    <img class="recipe-img" src="{{recipe.recipe.image}}" alt="">
+                    <!-- Content -->
+                    <div class="top-cta-content">
+                        <h3>{{recipe.recipe.label}}</h3>
+                        <h6>Simple &amp; Delicios</h6>
+                        <a [routerLink]="['/recipe/single',{uri:recipe.recipe.uri}]" class="btn delicious-btn">See Full
+                            Receipe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Top Catagory Area End ##### -->

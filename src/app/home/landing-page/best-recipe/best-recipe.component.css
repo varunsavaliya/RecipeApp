@@ -1,0 +1,25 @@
+.recipe-img {
+  width: 350px;
+  height: auto;
+  object-fit: cover;
+}
+
+.meal-type {
+  color: #7a7a7a;
+  font-family: inherit;
+}
+
+.cuisine-type-capsule {
+  position: absolute;
+  background: red;
+  color: white;
+  padding: 6px 20px;
+  border-radius: 33px;
+  top: 10px;
+  left: 10px;
+  font-family: inherit;
+}
+
+.heading {
+  color: #4b4b4b;
+}

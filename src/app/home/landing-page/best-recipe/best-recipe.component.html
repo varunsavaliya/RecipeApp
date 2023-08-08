@@ -1,0 +1,31 @@
+
+<span class="loader my-5" *ngIf="showLoader"></span>
+
+<!-- ##### Best Receipe Area Start ##### -->
+<section class="best-receipe-area container" *ngIf="recipies.length > 0">
+    <div class="row">
+        <div class="col-12">
+            <div class="elements-title mt-4 mb-5">
+                <h3 class="heading">Best Pizzas</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Single Best Receipe Area -->
+        <div class="col-12 col-sm-6 col-lg-4" *ngFor="let recipe of recipies">
+            <div class="single-best-receipe-area mb-30">
+                <div class="cuisine-type-capsule">{{recipe.recipe.cuisineType}}</div>
+                <img class="recipe-img" src="{{recipe.recipe.images.REGULAR.url}}" alt="">
+                <div class="receipe-content">
+                    <a [routerLink]="['/recipe/single',{uri:recipe.recipe.uri}]">
+                        <h5>{{recipe.recipe.label}}</h5>
+                        <span class="meal-type">For {{recipe.recipe.mealType[0]}}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- ##### Best Receipe Area End ##### -->

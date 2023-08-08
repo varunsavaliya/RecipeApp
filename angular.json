@@ -25,9 +25,28 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/owl.carousel.min.css",
+              "src/assets/css/animate.css",
+              "src/assets/css/magnific-popup.css",
+              "src/assets/css/font-awesome.min.css",
+              "src/assets/css/custom-icon.css",
+              "src/assets/css/classy-nav.min.css",
+              "src/assets/css/nice-select.min.css",
+              "src/assets/scss/_fonts.scss",
+              "src/assets/scss/_mixin.scss",
+              "src/assets/scss/_responsive.scss",
+              "src/assets/scss/_theme_color.scss",
+              "src/assets/scss/style.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery/jquery-2.2.4.min.js",
+              "src/assets/js/bootstrap/popper.min.js",
+              "src/assets/js/bootstrap/bootstrap.min.js",
+              "src/assets/js/plugins/plugins.js",
+              "src/assets/js/active.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -94,5 +113,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
