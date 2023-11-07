@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RecipeByIdService } from 'src/app/core/apiservices/recipe-by-id.service';
 import { RecipeListService } from 'src/app/core/apiservices/recipe-list.service';
 
@@ -8,6 +8,7 @@ import { RecipeListService } from 'src/app/core/apiservices/recipe-list.service'
   styleUrls: ['./best-recipe.component.css']
 })
 export class BestRecipeComponent {
+  @Input() title!: string;
   recipies: any[] = [];
   showLoader: boolean = true;
   constructor(private recipeListService: RecipeListService) { }

@@ -6,13 +6,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './shared/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
+import { LoaderComponent } from './shared/loader/loader.component';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.co
   exports: [
     HeaderComponent,
     FooterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LoaderComponent
   ]
 })
 export class CoreModule { }

@@ -8,6 +8,7 @@ import { RecipeByIdService } from 'src/app/core/apiservices/recipe-by-id.service
   styleUrls: ['./recipe-page.component.css']
 })
 export class RecipePageComponent {
+  showLoader: boolean = true;
   recipe:any;
   uri: any;
   constructor(private activeRoute: ActivatedRoute,private recipeService: RecipeByIdService){}
@@ -18,6 +19,7 @@ export class RecipePageComponent {
       this.recipeService.getRecipeByUri(this.uri).subscribe({
         next: (response) => {
           this.recipe = response.hits[0].recipe;
+          this.showLoader = false;
         }
       })
     });

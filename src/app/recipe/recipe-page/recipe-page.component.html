@@ -1,3 +1,4 @@
+<app-loader [showLoader]="showLoader"></app-loader>
 <!-- ##### Breadcumb Area Start ##### -->
 <div *ngIf="recipe" class="breadcumb-area bg-img bg-overlay"
     style="background-image: url({{recipe.image}});">
@@ -52,7 +53,6 @@
                                     </a></h6>
                             <div id="collapse_{{i+1}}" class="accordion-content collapse">
                                 <p>{{ing.text}}</p>
-                                <p class="d-block">Food - {{ing.food}}</p>
                                 <p class="d-block">Measure - {{ing.measure}}</p>
                                 <p class="d-block">Quantity - {{ing.quantity}}</p>
                             </div>

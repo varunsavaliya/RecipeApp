@@ -9,7 +9,7 @@ import { RecipeByIdService } from 'src/app/core/apiservices/recipe-by-id.service
 export class TopCategoryComponent {
 
   recipes: any[] = [];
-
+showLoader : boolean = true;
   constructor(private service: RecipeByIdService){}
 
   ngOnInit() {
@@ -22,6 +22,7 @@ export class TopCategoryComponent {
             count++;
           }
         });
+        this.showLoader = false;
       },
       error: (error) => {
         console.error('Error fetching recipe data:', error);

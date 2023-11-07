@@ -21,8 +21,6 @@ export class RecipeByIdService  {
     .set('app_id', this.appId)
     .set('uri', uri)
     .set('type','public');
-    console.log(uri);
-    
     return this.http.get<any>(this.ApiUrl + '/by-uri', {params});
   }
 

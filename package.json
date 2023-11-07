@@ -1,6 +1,9 @@
 {
   "name": "recipe-app",
   "version": "0.0.0",
+  "engine": {
+    "node": "<=18 >19"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

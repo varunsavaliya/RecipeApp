@@ -1,12 +1,11 @@
 
-<span class="loader my-5" *ngIf="showLoader"></span>
-
+<app-loader [showLoader]="showLoader"></app-loader>
 <!-- ##### Best Receipe Area Start ##### -->
 <section class="best-receipe-area container" *ngIf="recipies.length > 0">
     <div class="row">
         <div class="col-12">
             <div class="elements-title mt-4 mb-5">
-                <h3 class="heading">Best Pizzas</h3>
+                <h3 class="heading">{{title}}</h3>
             </div>
         </div>
     </div>
