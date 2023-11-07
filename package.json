@@ -1,13 +1,10 @@
 {
   "name": "recipe-app",
   "version": "0.0.0",
-  "engine": {
-    "node": "<=18 >19"
-  },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "node index.js",
+    "build": "npm install && npm run build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
